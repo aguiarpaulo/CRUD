@@ -9,6 +9,6 @@ class ProductModel(Base):
     name = Column(String, index=True)
     description = Column(String, index=True)
     price = Column(Float, index=True)
-    categoria = Column(String, index=True)
-    email_fornecedor = Column(String, index=True)
+    category = Column(String, index=True)
+    email = Column(String, index=True)
     created_at = Column(DateTime(timezone=True), default=func.now(), index=True)
