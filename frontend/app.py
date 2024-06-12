@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 st.image("brand.png", width=200)
 
-st.tittle("Products Management")
+st.title("Products Management")
 
 # Function to show detailed errors
 def show_response_message(response):
@@ -22,7 +22,7 @@ def show_response_message(response):
                     st.error(f"Error: {errors}")
                 else:
                     # Otherwise show the error.
-                    st.erroe(f"Error: {data["detail"]}")
+                    st.erroe(f"Error: {data['detail']}")
         except ValueError:
             st.error("Unknown error")
 
@@ -77,7 +77,7 @@ with st.expander("Show Products"):
             show_response_message(response)
 
 # Delete product
-with st.expander("delete the product"):
+with st.expander("Delete the product"):
     delete_id = st.number_input("Product ID to delete", min_value=1, format="%d")
     if st.button("Delete the Product"):
         response = requests.delete(f"http://backend:8000/products/{delete_id}")
