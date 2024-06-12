@@ -26,7 +26,7 @@ class ProductBase(BaseModel):
 class ProductCreate(ProductBase):
     pass
 
-class ProductReponse(PRoductBAse):
+class ProductReponse(ProductBase):
     id: int
     created_at: datetime
 
@@ -44,6 +44,6 @@ class ProductUpdate(BaseModel):
     def check_category(cls, v):
         if v is None:
             return v
-        if v in [item.value for item in CategoriaBase]:
+        if v in [item.value for item in CategoryBase]:
             return v
         raise ValueError("Invalid Category")
