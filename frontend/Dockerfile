@@ -3,10 +3,10 @@
 # Image base
 FROM python:3.9
 
-# Directory in the container
+# Define the directory in the container
 WORKDIR /app
 
-# Copy the files and its dependenciesCopiar os arquivos de dependências e instalar
+# Copy the files and its dependencies and install
 COPY pyproject.toml /app/pyproject.toml
 RUN poetry add --no-cache-dir --upgrade -r /app/pyproject.toml
 
