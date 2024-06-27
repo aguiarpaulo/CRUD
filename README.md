@@ -36,6 +36,9 @@ backend -> python3 app/main
 or 
 
 docker compose up
+
+> to rebuild
+docker build -t name_of_your_image:tag .
 ```
 8. Check in the data/output folder if the file was generated correctly.
 ```
